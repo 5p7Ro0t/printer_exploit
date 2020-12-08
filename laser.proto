@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Data {
+    string feed = 1;
+}
+
+message Content {
+    string data = 1;
+}
+
+service Print {
+    rpc Feed(Content) returns (Data) {}
+}
